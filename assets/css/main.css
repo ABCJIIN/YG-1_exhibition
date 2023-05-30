@@ -4,6 +4,7 @@
 /* 모바일 */
 * {
   box-sizing: border-box;
+  letter-spacing: -0.02em;
   margin: 0;
   border: 0;
   padding: 0;
@@ -24,7 +25,7 @@ body * {
 
 .con-box {
   width: calc(100% - 4rem);
-  max-width: 1980px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -66,6 +67,7 @@ body * {
 /* 모바일 */
 * {
   box-sizing: border-box;
+  letter-spacing: -0.02em;
   margin: 0;
   border: 0;
   padding: 0;
@@ -86,7 +88,7 @@ body * {
 
 .con-box {
   width: calc(100% - 4rem);
-  max-width: 1980px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -126,6 +128,121 @@ body * {
 /* 노트북 */
 /* 테블릿 */
 /* 모바일 */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  background: #363636;
+  border: 1px solid #DDDDDD;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#footer .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .inner .sns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.4rem;
+  margin-left: 10rem;
+}
+#footer .inner .sns li {
+  width: 4rem;
+}
+#footer .inner .sns li a {
+  width: 100%;
+}
+#footer .inner .sns li a img {
+  width: 100%;
+}
+#footer .inner .btn_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.8rem;
+}
+#footer .inner .btn_wrap button {
+  position: relative;
+  background: transparent;
+}
+#footer .inner .btn_wrap button.prev_btn, #footer .inner .btn_wrap button.next_btn {
+  width: 4rem;
+}
+#footer .inner .btn_wrap button.prev_btn img, #footer .inner .btn_wrap button.next_btn img {
+  width: 100%;
+}
+#footer .inner .btn_wrap button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -50%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.6rem;
+  background: #AAAAAA;
+}
+#footer .inner .btn_wrap button.home_btn {
+  width: 3.6rem;
+}
+#footer .inner .btn_wrap button.home_btn img {
+  width: 100%;
+}
+#footer .inner .language_wrap {
+  margin-right: 8.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+#footer .inner .language_wrap label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+#footer .inner .language_wrap label img {
+  width: 3.2rem;
+}
+#footer .inner .language_wrap label span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 2.5rem;
+}
+#footer .inner .language_wrap .select_wrap {
+  width: 16rem;
+  height: 4rem;
+  border: 1px solid #EEEEEE;
+  background: url("../../../assets/images/icon/bottom_arrow.png") no-repeat 95% 50% #ffffff;
+}
+#footer .inner .language_wrap .select_wrap #language {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #222222;
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+}
+
 #quickMenu .scroll-box {
   width: 100%;
   position: relative;
@@ -143,13 +260,16 @@ body * {
 /* 테블릿 */
 /* 모바일 */
 #wrapper {
-  width: 100vw;
+  width: 100%;
+  height: 100vh;
 }
 #wrapper #wrap {
   width: 100%;
+  height: 100%;
 }
 #wrapper #wrap #main {
   width: 100%;
+  height: 100%;
 }
 #wrapper #wrap #main .inner .title {
   display: flex;
@@ -163,19 +283,15 @@ body * {
   font-weight: 700;
 }
 #wrapper #wrap #main .inner .link {
-  max-width: 1200px;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
 }
 #wrapper #wrap #main .inner .link li {
   margin-right: -12%;
+  width: 20%;
   -webkit-clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
           clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
-  background: yellowgreen;
 }
 #wrapper #wrap #main .inner .link li:nth-last-child(5) {
   z-index: 5;
@@ -191,4 +307,13 @@ body * {
 }
 #wrapper #wrap #main .inner .link li:nth-last-child(1) {
   z-index: 1;
+}
+#wrapper #wrap #main .inner .link li a {
+  width: 100%;
+  position: relative;
+}
+#wrapper #wrap #main .inner .link li a img {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
 }

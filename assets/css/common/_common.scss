@@ -2,6 +2,7 @@
 
 $black: #222222;
 $white: #ffffff;
+$poppins: 'Poppins', sans-serif;
 
 @mixin border($width, $color) {border: $width solid $color;}
 @mixin flexbox($direction, $justfy, $align){
@@ -33,6 +34,7 @@ $white: #ffffff;
 
 *{
     box-sizing: border-box;
+    letter-spacing: -0.02em;
     margin: 0;
     border: 0;
     padding: 0;
@@ -53,7 +55,7 @@ body{
 
 .con-box{
     width: calc(100% - 4rem);
-    max-width: 1980px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
