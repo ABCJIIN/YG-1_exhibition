@@ -3,6 +3,8 @@
 $black: #222222;
 $white: #ffffff;
 $poppins: 'Poppins', sans-serif;
+$play: 'Play', sans-serif;
+$spoqa: 'Spoqa Han Sans Neo', 'sans-serif';
 
 @mixin border($width, $color) {border: $width solid $color;}
 @mixin flexbox($direction, $justfy, $align){
@@ -51,6 +53,11 @@ body{
         font-weight: 400;
         color: $black;
     }
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
 }
 
 .con-box{

@@ -1,0 +1,75 @@
+<div class="scroll-box">
+    <ul class="control-wrap">
+        <li><a id="scrollUpBtn" href="javascript:void(0)"><img src="../../assets/images/icon/quick_top.png" alt="quick top button"></a></li>
+        <li><a id="scrollDownBtn" href="javascript:void(0)"><img src="../../assets/images/icon/quick_bottom.png" alt="quick bottom button"></a></li>
+    </ul>
+</div>
+
+<!-- <script>
+    $(document).ready(function() {
+        var scrollIntervalUp;
+        var scrollIntervalDown;
+
+        // 위로 스크롤 함수
+        function scrollUp() {
+            $('html, body').animate({ scrollTop: '-=50px' }, 100);
+        }
+
+        // 아래로 스크롤 함수
+        function scrollDown() {
+            $('html, body').animate({ scrollTop: '+=50px' }, 100);
+        }
+
+        // 위로 스크롤 버튼 이벤트 처리
+        $('#scrollUpBtn').mousedown(function() {
+            scrollIntervalUp = setInterval(scrollUp, 100);
+        }).mouseup(function() {
+            clearInterval(scrollIntervalUp);
+        }).mouseleave(function() {
+            clearInterval(scrollIntervalUp);
+        });
+
+        // 아래로 스크롤 버튼 이벤트 처리
+        $('#scrollDownBtn').mousedown(function() {
+            scrollIntervalDown = setInterval(scrollDown, 100);
+        }).mouseup(function() {
+            clearInterval(scrollIntervalDown);
+        }).mouseleave(function() {
+            clearInterval(scrollIntervalDown);
+        });
+    });
+</script> -->
+<script>
+    $(document).ready(function() {
+        var scrollIntervalUp;
+        var scrollIntervalDown;
+
+        // 위로 스크롤 함수
+        function scrollUp() {
+            $('.category_cont').animate({ scrollTop: '-=50px' }, 100);
+        }
+
+        // 아래로 스크롤 함수
+        function scrollDown() {
+            $('.category_cont').animate({ scrollTop: '+=50px' }, 100);
+        }
+
+        // 위로 스크롤 버튼 이벤트 처리
+        $('#scrollUpBtn').mousedown(function() {
+            scrollIntervalUp = setInterval(scrollUp, 100);
+        }).mouseup(function() {
+            clearInterval(scrollIntervalUp);
+        }).mouseleave(function() {
+            clearInterval(scrollIntervalUp);
+        });
+
+        // 아래로 스크롤 버튼 이벤트 처리
+        $('#scrollDownBtn').mousedown(function() {
+            scrollIntervalDown = setInterval(scrollDown, 100);
+        }).mouseup(function() {
+            clearInterval(scrollIntervalDown);
+        }).mouseleave(function() {
+            clearInterval(scrollIntervalDown);
+        });
+    });
+</script>
