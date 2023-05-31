@@ -1,0 +1,14 @@
+#wrapper {
+    #wrap {
+        #toolingsystem {
+            .gnb-wrap {
+                li {
+                    &:last-child {
+                        height: 7rem;
+                        background: url('../../../assets/images/icon/toolingsystem_icon.png') no-repeat left/contain #C11D20;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+#wrapper {
+    #wrap {
+        #holemaking {
+            .gnb-wrap {
+                li {
+                    &:first-child {
+                        height: 7rem;
+                        background: url('../../../assets/images/icon/holemaking_icon.png') no-repeat left/contain #812A9E;
+                    }
+                }
+            }
+        }
+    }
+}

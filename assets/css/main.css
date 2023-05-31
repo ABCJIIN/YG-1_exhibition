@@ -27,6 +27,145 @@ body * {
   width: 100%;
   height: 100vh;
 }
+#wrapper #wrap {
+  width: 100%;
+  height: 100%;
+}
+#wrapper #wrap section {
+  width: 100%;
+  height: 100%;
+}
+#wrapper #wrap section .gnb-wrap {
+  position: absolute;
+  top: 11.6rem;
+  left: 0;
+  width: 100%;
+}
+#wrapper #wrap section .gnb-wrap .gnb {
+  width: 100%;
+  background: #222222;
+  height: 5.6rem;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 5.6rem;
+  background: #656565;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:first-child {
+  height: 7rem;
+  background: url("../../../assets/images/icon/holemaking_icon.png") no-repeat left/contain #812A9E;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(2) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/threading_icon.png") no-repeat left/contain #00B2B2;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(3) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/milling_icon.png") no-repeat left/contain #1254B5;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(4) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/tuning_icon.png") no-repeat left/contain #F28E00;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:last-child {
+  height: 7rem;
+  background: url("../../../assets/images/icon/toolingsystem_icon.png") no-repeat left/contain #C11D20;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ffffff;
+}
+#wrapper #wrap section .product-inner {
+  position: absolute;
+  top: 17.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1440px;
+  height: calc(100% - 25.2rem);
+  padding-bottom: 2rem;
+}
+#wrapper #wrap section .product-inner .category {
+  width: 100%;
+  margin-top: 3.6rem;
+}
+#wrapper #wrap section .product-inner .category ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4.8rem;
+}
+#wrapper #wrap section .product-inner .category ul li {
+  position: relative;
+}
+#wrapper #wrap section .product-inner .category ul li:hover a {
+  color: #ED1C24;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .product-inner .category ul li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 0.8rem;
+  background: #DDDDDD;
+  position: absolute;
+  top: 50%;
+  right: -2.4rem;
+  transform: translateY(-50%);
+}
+#wrapper #wrap section .product-inner .category ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: #AAAAAA;
+}
+#wrapper #wrap section .product-inner .category_cont {
+  width: 100%;
+  margin-top: 3rem;
+  padding-right: 1.6rem;
+  height: calc(100% - 9.2rem);
+  overflow-y: auto;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar {
+  width: 8px;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar-thumb {
+  background: #AAAAAA;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar-track {
+  background: #E6E6E6;
+}
 
 .con-box {
   width: calc(100% - 4rem);
@@ -34,6 +173,12 @@ body * {
   margin: 0 auto;
 }
 
+.category-list:not(:first-child) {
+  padding-top: 8rem;
+}
+.category-list:last-child {
+  margin-bottom: 0;
+}
 .category-list .category-list-tit {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-size: 2.4rem;
@@ -41,27 +186,25 @@ body * {
   margin-top: 0.6rem;
   border-bottom: 1px solid #222222;
 }
-.category-list .category-list-wrap {
+
+.category-list-wrap {
   margin-top: 2.4rem;
 }
-.category-list .category-list-wrap .active ul {
+.category-list-wrap ul {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 6rem 2.4rem;
 }
-.category-list .category-list-wrap .active ul li {
+.category-list-wrap ul li {
   width: calc(25% - 1.8rem);
 }
-.category-list .category-list-wrap .active ul li a {
+.category-list-wrap ul li a {
   width: 100%;
   height: 100%;
   display: block;
 }
-.category-list .category-list-wrap .active ul li a div {
+.category-list-wrap ul li a div {
   position: relative;
   margin-bottom: 1.2rem;
   width: 100%;
@@ -74,7 +217,7 @@ body * {
   justify-content: center;
   align-items: center;
 }
-.category-list .category-list-wrap .active ul li a div img {
+.category-list-wrap ul li a div img {
   width: 100%;
   height: 100%;
   display: block;
@@ -82,7 +225,7 @@ body * {
      object-fit: cover;
   transition: all 0.35s;
 }
-.category-list .category-list-wrap .active ul li a .sub-tit {
+.category-list-wrap ul li a .sub-tit {
   position: relative;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 600;
@@ -91,7 +234,7 @@ body * {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.category-list .category-list-wrap .active ul li a span {
+.category-list-wrap ul li a span {
   display: -webkit-box;
   overflow: hidden;
   word-break: keep-all;
@@ -157,6 +300,145 @@ body * {
   width: 100%;
   height: 100vh;
 }
+#wrapper #wrap {
+  width: 100%;
+  height: 100%;
+}
+#wrapper #wrap section {
+  width: 100%;
+  height: 100%;
+}
+#wrapper #wrap section .gnb-wrap {
+  position: absolute;
+  top: 11.6rem;
+  left: 0;
+  width: 100%;
+}
+#wrapper #wrap section .gnb-wrap .gnb {
+  width: 100%;
+  background: #222222;
+  height: 5.6rem;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 5.6rem;
+  background: #656565;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:first-child {
+  height: 7rem;
+  background: url("../../../assets/images/icon/holemaking_icon.png") no-repeat left/contain #812A9E;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(2) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/threading_icon.png") no-repeat left/contain #00B2B2;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(3) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/milling_icon.png") no-repeat left/contain #1254B5;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:nth-child(4) {
+  height: 7rem;
+  background: url("../../../assets/images/icon/tuning_icon.png") no-repeat left/contain #F28E00;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li:hover:last-child {
+  height: 7rem;
+  background: url("../../../assets/images/icon/toolingsystem_icon.png") no-repeat left/contain #C11D20;
+}
+#wrapper #wrap section .gnb-wrap .gnb ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #ffffff;
+}
+#wrapper #wrap section .product-inner {
+  position: absolute;
+  top: 17.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1440px;
+  height: calc(100% - 25.2rem);
+  padding-bottom: 2rem;
+}
+#wrapper #wrap section .product-inner .category {
+  width: 100%;
+  margin-top: 3.6rem;
+}
+#wrapper #wrap section .product-inner .category ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4.8rem;
+}
+#wrapper #wrap section .product-inner .category ul li {
+  position: relative;
+}
+#wrapper #wrap section .product-inner .category ul li:hover a {
+  color: #ED1C24;
+  transition: all 0.3s;
+}
+#wrapper #wrap section .product-inner .category ul li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 0.8rem;
+  background: #DDDDDD;
+  position: absolute;
+  top: 50%;
+  right: -2.4rem;
+  transform: translateY(-50%);
+}
+#wrapper #wrap section .product-inner .category ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: #AAAAAA;
+}
+#wrapper #wrap section .product-inner .category_cont {
+  width: 100%;
+  margin-top: 3rem;
+  padding-right: 1.6rem;
+  height: calc(100% - 9.2rem);
+  overflow-y: auto;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar {
+  width: 8px;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar-thumb {
+  background: #AAAAAA;
+}
+#wrapper #wrap section .product-inner .category_cont::-webkit-scrollbar-track {
+  background: #E6E6E6;
+}
 
 .con-box {
   width: calc(100% - 4rem);
@@ -164,6 +446,12 @@ body * {
   margin: 0 auto;
 }
 
+.category-list:not(:first-child) {
+  padding-top: 8rem;
+}
+.category-list:last-child {
+  margin-bottom: 0;
+}
 .category-list .category-list-tit {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-size: 2.4rem;
@@ -171,27 +459,25 @@ body * {
   margin-top: 0.6rem;
   border-bottom: 1px solid #222222;
 }
-.category-list .category-list-wrap {
+
+.category-list-wrap {
   margin-top: 2.4rem;
 }
-.category-list .category-list-wrap .active ul {
+.category-list-wrap ul {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 6rem 2.4rem;
 }
-.category-list .category-list-wrap .active ul li {
+.category-list-wrap ul li {
   width: calc(25% - 1.8rem);
 }
-.category-list .category-list-wrap .active ul li a {
+.category-list-wrap ul li a {
   width: 100%;
   height: 100%;
   display: block;
 }
-.category-list .category-list-wrap .active ul li a div {
+.category-list-wrap ul li a div {
   position: relative;
   margin-bottom: 1.2rem;
   width: 100%;
@@ -204,7 +490,7 @@ body * {
   justify-content: center;
   align-items: center;
 }
-.category-list .category-list-wrap .active ul li a div img {
+.category-list-wrap ul li a div img {
   width: 100%;
   height: 100%;
   display: block;
@@ -212,7 +498,7 @@ body * {
      object-fit: cover;
   transition: all 0.35s;
 }
-.category-list .category-list-wrap .active ul li a .sub-tit {
+.category-list-wrap ul li a .sub-tit {
   position: relative;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 600;
@@ -221,7 +507,7 @@ body * {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.category-list .category-list-wrap .active ul li a span {
+.category-list-wrap ul li a span {
   display: -webkit-box;
   overflow: hidden;
   word-break: keep-all;
@@ -266,7 +552,7 @@ body * {
   position: relative;
   width: 100%;
 }
-#header .logo_area {
+#header .logo-area {
   position: fixed;
   top: 0;
   left: 0;
@@ -278,69 +564,13 @@ body * {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  z-index: 999;
+  z-index: 888;
 }
-#header .logo_area .inner {
+#header .logo-area .inner {
   max-width: 1733px;
-  width: 100%;
-  margin: 0 auto;
 }
-#header .logo_area .inner h1 img {
+#header .logo-area .inner h1 img {
   width: 8.7rem;
-}
-#header .gnb_wrap {
-  position: absolute;
-  top: 11.6rem;
-  left: 0;
-  width: 100%;
-  height: 11.2rem;
-}
-#header .gnb_wrap .gnb {
-  width: 100%;
-  background: #222222;
-  height: 5.6rem;
-}
-#header .gnb_wrap .gnb ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
-}
-#header .gnb_wrap .gnb ul li {
-  position: relative;
-  width: 20%;
-  height: 100%;
-  text-align: center;
-}
-#header .gnb_wrap .gnb ul li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 5.6rem;
-  background: #656565;
-}
-#header .gnb_wrap .gnb ul li:nth-child(2) {
-  height: 7rem;
-  background: url("../../../assets/images/icon/threading_icon.png") no-repeat left/contain #00B2B2;
-}
-#header .gnb_wrap .gnb ul li a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 3rem;
-  color: #ffffff;
 }
 
 #footer {
@@ -355,6 +585,7 @@ body * {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  z-index: 999;
 }
 #footer .inner {
   display: flex;
@@ -396,7 +627,7 @@ body * {
   justify-content: center;
   align-items: center;
 }
-#footer .inner .sns li .popuop .popup_inner {
+#footer .inner .sns li .popuop .popup-inner {
   position: relative;
   padding: 0.8rem 1.9rem;
   width: 36rem;
@@ -409,45 +640,45 @@ body * {
   justify-content: flex-start;
   align-items: center;
 }
-#footer .inner .sns li .popuop .popup_inner button {
+#footer .inner .sns li .popuop .popup-inner button {
   background: transparent;
 }
-#footer .inner .sns li .popuop .popup_inner button img {
+#footer .inner .sns li .popuop .popup-inner button img {
   position: absolute;
   top: -4.8rem;
   right: 0;
 }
-#footer .inner .sns li .popuop .popup_inner p {
+#footer .inner .sns li .popuop .popup-inner p {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 400;
   text-align: center;
 }
-#footer .inner .sns li .popuop .popup_inner p:first-child {
+#footer .inner .sns li .popuop .popup-inner p:first-child {
   padding-top: 1.5rem;
 }
-#footer .inner .sns li .popuop .popup_inner p:last-child {
+#footer .inner .sns li .popuop .popup-inner p:last-child {
   padding-top: 1.1rem;
 }
-#footer .inner .btn_wrap {
+#footer .inner .btn-wrap {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 3.8rem;
 }
-#footer .inner .btn_wrap button {
+#footer .inner .btn-wrap button {
   position: relative;
   background: transparent;
 }
-#footer .inner .btn_wrap button.prev_btn, #footer .inner .btn_wrap button.next_btn {
+#footer .inner .btn-wrap button.prev-btn, #footer .inner .btn-wrap button.next-btn {
   width: 4rem;
 }
-#footer .inner .btn_wrap button.prev_btn img, #footer .inner .btn_wrap button.next_btn img {
+#footer .inner .btn-wrap button.prev-btn img, #footer .inner .btn-wrap button.next-btn img {
   width: 100%;
 }
-#footer .inner .btn_wrap button:not(:last-child)::after {
+#footer .inner .btn-wrap button:not(:last-child)::after {
   content: "";
   position: absolute;
   right: -50%;
@@ -457,61 +688,103 @@ body * {
   height: 1.6rem;
   background: #AAAAAA;
 }
-#footer .inner .btn_wrap button.home_btn {
+#footer .inner .btn-wrap button.home-btn {
   width: 3.6rem;
 }
-#footer .inner .btn_wrap button.home_btn img {
+#footer .inner .btn-wrap button.home-btn img {
   width: 100%;
 }
-#footer .inner .language_wrap {
+#footer .inner .lang-wrap {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
-#footer .inner .language_wrap label {
+#footer .inner .lang-wrap .select-info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #ffffff;
 }
-#footer .inner .language_wrap label img {
+#footer .inner .lang-wrap .select-info > img {
   width: 3.2rem;
 }
-#footer .inner .language_wrap label span {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
-  line-height: 2.5rem;
-}
-#footer .inner .language_wrap .select_wrap {
+#footer .inner .lang-wrap .select-custom {
+  position: relative;
   width: 16rem;
   height: 4rem;
-  border: 1px solid #EEEEEE;
-  background: url("../../../assets/images/icon/bottom_arrow.png") no-repeat 95% 50% #ffffff;
+  z-index: 888;
+  cursor: pointer;
 }
-#footer .inner .language_wrap .select_wrap #language {
+#footer .inner .lang-wrap .select-custom .select-tit {
   width: 100%;
   height: 100%;
-  padding: 0.5rem;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
-  color: #222222;
-  border: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  background: #ffffff;
+  border: 1px solid #EEEEEE;
+  padding: 0.7rem;
+}
+#footer .inner .lang-wrap .select-custom .select-tit::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../../../assets/images/icon/select_arrow.png) no-repeat center/contain;
+  transition: all 0.3s;
+}
+#footer .inner .lang-wrap .select-custom .select-tit > img {
+  width: 3rem;
+}
+#footer .inner .lang-wrap .select-custom .select-tit.on::after {
+  transform: translate(0, -50%) rotate(-180deg);
+  transition: all 0.3s;
+}
+#footer .inner .lang-wrap .select-custom .select-custom-list {
+  display: none;
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+#footer .inner .lang-wrap .select-custom .select-custom-list li {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem;
 }
 
 #quickMenu {
   position: fixed;
-  right: -12%;
-  bottom: 10%;
+  right: 7%;
+  bottom: 14rem;
+  z-index: 888;
 }
 #quickMenu .scroll-box {
   position: relative;

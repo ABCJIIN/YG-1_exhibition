@@ -58,6 +58,141 @@ body{
 #wrapper {
     width: 100%;
     height: 100vh;
+    #wrap {
+        width: 100%;
+        height: 100%;
+        section {
+            width: 100%;
+            height: 100%;
+            .gnb-wrap {
+                position: absolute;
+                top: 11.6rem;
+                left: 0;
+                width: 100%;
+                // height: 11.2rem;
+                .gnb {
+                    width: 100%;
+                    background: $black;
+                    height: 5.6rem;
+                    ul {
+                        @include flexbox(row, center, flex-end);
+                        margin: 0 auto;
+                        width: 100%;
+                        max-width: 1440px;
+                        height: 100%;
+                        li {
+                            position: relative;
+                            width: calc(100% / 5);
+                            height: 100%;
+                            text-align: center;
+                            transition: all .3s;
+                            &:not(:last-child) {
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    width: 1px;
+                                    height: 5.6rem;
+                                    background: #656565;
+                                }
+                            }
+                            &:hover {
+                                &:first-child {
+                                    height: 7rem;
+                                    background: url('../../../assets/images/icon/holemaking_icon.png') no-repeat left/contain #812A9E;
+                                    transition: all .3s;
+                                }
+                                &:nth-child(2) {
+                                    height: 7rem;
+                                    background: url('../../../assets/images/icon/threading_icon.png') no-repeat left/contain #00B2B2;
+                                }
+                                &:nth-child(3) {
+                                    height: 7rem;
+                                    background: url('../../../assets/images/icon/milling_icon.png') no-repeat left/contain #1254B5;
+                                }
+                                &:nth-child(4) {
+                                    height: 7rem;
+                                    background: url('../../../assets/images/icon/tuning_icon.png') no-repeat left/contain #F28E00;
+                                }
+                                &:last-child {
+                                    height: 7rem;
+                                    background: url('../../../assets/images/icon/toolingsystem_icon.png') no-repeat left/contain #C11D20;
+                                }
+                            }
+                            a {
+                                @include flexbox(row, center, center);
+                                width: 100%;
+                                height: 100%;
+                                font-family: $poppins;
+                                font-weight: 600;
+                                font-size: 2rem;
+                                line-height: 3rem;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+            .product-inner {
+                position: absolute;
+                top: 17.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 1440px;
+                height: calc(100% - 25.2rem);
+                padding-bottom: 2rem;
+                .category {
+                    width: 100%;
+                    margin-top: 3.6rem;
+                    ul {
+                        @include flexbox(row, flex-start, center);
+                        gap: 4.8rem;
+                        li {
+                            position: relative;
+                            &:hover {
+                                a {
+                                    color: #ED1C24;
+                                    transition: all .3s;
+                                    // border-bottom: 1px solid #ED1C24;
+                                }
+                            }
+                            &:not(:last-child) {
+                                &::after {
+                                    content: '';
+                                    width: 1px;
+                                    height: 0.8rem;
+                                    background: #DDDDDD;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -2.4rem;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            a {
+                                font-family: $poppins;
+                                font-size: 1.6rem;
+                                font-weight: 600;
+                                line-height: 2.4rem;
+                                color: #AAAAAA;
+                            }
+                        }
+                    }
+                }
+                .category_cont {
+                    width: 100%;
+                    margin-top: 3rem;
+                    padding-right: 1.6rem;
+                    height: calc(100% - 9.2rem);
+                    overflow-y: auto;
+                    &::-webkit-scrollbar {width: 8px;}
+                    &::-webkit-scrollbar-thumb {background: #AAAAAA;}
+                    &::-webkit-scrollbar-track {background: #E6E6E6;}
+                }
+                
+            }
+        }
+    }
 }
 
 .con-box{
@@ -67,6 +202,12 @@ body{
 }
 
 .category-list {
+    &:not(:first-child) {
+        padding-top: 8rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
     .category-list-tit {
         font-family: $spoqa;
         font-size: 2.4rem;
@@ -74,51 +215,50 @@ body{
         margin-top: 0.6rem;
         border-bottom: 1px solid $black;
     }
-    .category-list-wrap {
-        margin-top: 2.4rem;
-        .active {
-            ul {
+}
+
+.category-list-wrap {
+    margin-top: 2.4rem;
+    ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem 2.4rem;
+        li {
+            width: calc(25% - 1.8rem);
+            a {
                 width: 100%;
-                @include flexbox(row, flex-start, flex-start);
-                flex-wrap: wrap;
-                gap: 6rem 2.4rem;
-                li {
-                    width: calc(25% - 1.8rem);
-                    a {
+                height: 100%;
+                display: block;
+                div {
+                    position: relative;
+                    margin-bottom: 1.2rem;
+                    width: 100%;
+                    max-height: 38rem;
+                    height: 87%;
+                    overflow: hidden;
+                    border: 1px solid #eee;
+                    @include flexbox(row, center, center);
+                    img {
                         width: 100%;
                         height: 100%;
                         display: block;
-                        div {
-                            position: relative;
-                            margin-bottom: 1.2rem;
-                            width: 100%;
-                            max-height: 38rem;
-                            height: 87%;
-                            overflow: hidden;
-                            border: 1px solid #eee;
-                            @include flexbox(row, center, center);
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                display: block;
-                                object-fit: cover;
-                                transition: all .35s;
-                            }
-                        }
-                        .sub-tit {
-                            position: relative;
-                            font-family: $spoqa;
-                            font-weight: 600;
-                            font-size: 2rem;
-                            @include ellipsis(1);
-                        }
-                        span {
-                            @include ellipsis(2);
-                            font-family: $spoqa;
-                            font-size: 1.6rem;
-                            font-weight: 400;
-                        }
+                        object-fit: cover;
+                        transition: all .35s;
                     }
+                }
+                .sub-tit {
+                    position: relative;
+                    font-family: $spoqa;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    @include ellipsis(1);
+                }
+                span {
+                    @include ellipsis(2);
+                    font-family: $spoqa;
+                    font-size: 1.6rem;
+                    font-weight: 400;
                 }
             }
         }

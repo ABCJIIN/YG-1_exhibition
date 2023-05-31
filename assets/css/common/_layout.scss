@@ -5,7 +5,7 @@
 #header {
     position: relative;
     width: 100%;
-    .logo_area {
+    .logo-area {
         position: fixed;
         top: 0;
         left: 0;
@@ -14,64 +14,12 @@
         background: $white;
         border: 1px solid #DDDDDD;
         @include flexbox(row, flex-start, center);
-        z-index: 999;
+        z-index: 888;
         .inner {
             max-width: 1733px;
-            width: 100%;
-            margin: 0 auto;
             h1 {
                 img {
                     width: 8.7rem;
-                }
-            }
-        }
-    }
-    .gnb_wrap {
-        position: absolute;
-        top: 11.6rem;
-        left: 0;
-        width: 100%;
-        height: 11.2rem;
-        .gnb {
-            width: 100%;
-            background: $black;
-            height: 5.6rem;
-            ul {
-                @include flexbox(row, center, flex-end);
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1440px;
-                height: 100%;
-                li {
-                    position: relative;
-                    width: calc(100% / 5);
-                    height: 100%;
-                    text-align: center;
-                    &:not(:last-child) {
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            width: 1px;
-                            height: 5.6rem;
-                            background: #656565;
-                        }
-                    }
-                    &:nth-child(2) {
-                        height: 7rem;
-                        background: url('../../../assets/images/icon/threading_icon.png') no-repeat left/contain #00B2B2;
-                    }
-                    a {
-                        @include flexbox(row, center, center);
-                        width: 100%;
-                        height: 100%;
-                        font-family: $poppins;
-                        font-weight: 600;
-                        font-size: 2rem;
-                        line-height: 3rem;
-                        color: $white;
-                    }
                 }
             }
         }
@@ -88,6 +36,7 @@
     background: #363636;
     border-top: 1px solid #DDDDDD;
     @include flexbox(row, flex-start, center);
+    z-index: 999;
     .inner {
         @include flexbox(row, space-between, center);
         max-width: 1733px;
@@ -115,7 +64,7 @@
                     &.on {
                         @include flexbox(row, center, center);
                     }
-                    .popup_inner {
+                    .popup-inner {
                         position: relative;
                         padding: 0.8rem 1.9rem;
                         width: 36rem;
@@ -149,13 +98,13 @@
                 }
             }
         }
-        .btn_wrap {
+        .btn-wrap {
             @include flexbox(row, center, center);
             gap: 3.8rem;
             button {
                 position: relative;
                 background: transparent;
-                &.prev_btn , &.next_btn {
+                &.prev-btn , &.next-btn {
                     width: 4rem;
                     img{width: 100%;}
                 }
@@ -171,46 +120,86 @@
                         background: #AAAAAA;
                     }
                 }
-                &.home_btn {
+                &.home-btn {
                     width: 3.6rem;
                     img{width: 100%;}
                 }
             }
         }
-        .language_wrap {
-            // margin-right: 8.7rem;
+        .lang-wrap {
             @include flexbox(row, flex-start, center);
             gap: 2rem;
-            label {
+            .select-info {
                 @include flexbox(row, flex-start, center);
                 gap: 0.8rem;
-                img {
+                font-family: $poppins;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.5rem;
+                color: $white;
+                > img {
                     width: 3.2rem;
                 }
-                span {
-                    font-family: $poppins;
-                    font-weight: 400;
-                    color: $white;
-                    line-height: 2.5rem;
-                }
             }
-            .select_wrap {
+            .select-custom {
+                position: relative;
                 width: 16rem;
                 height: 4rem;
-                border: 1px solid #EEEEEE;
-                background: url('../../../assets/images/icon/bottom_arrow.png') no-repeat 95% 50% $white;
-                #language {
+                z-index: 888;
+                cursor: pointer;
+                .select-tit {
                     width: 100%;
                     height: 100%;
-                    padding: 0.5rem;
                     font-family: $poppins;
                     font-size: 1.4rem;
                     font-weight: 400;
                     line-height: 2rem;
-                    color: $black;
-                    border: 0;
-                    appearance: none;
-                    background: transparent;
+                    @include flexbox(row, flex-start, center);
+                    gap: 0.8rem;
+                    // background: url(../../../assets/images/icon/select_arrow.png) no-repeat 95% 50% $white;
+                    background: $white;
+                    border: 1px solid #EEEEEE;
+                    padding: 0.7rem;
+                    // cursor: pointer;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        right: 1.2rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url(../../../assets/images/icon/select_arrow.png) no-repeat center/contain;
+                        transition: all 0.3s;
+                    }
+                    > img {
+                        width: 3rem;
+                    }
+                    &.on {
+                        &::after {
+                            transform: translate(0, -50%) rotate(-180deg);
+                            transition: all 0.3s;
+                        }
+                    }
+                }
+                .select-custom-list {
+                    display: none;
+                    position: absolute;
+                    bottom: 4rem;
+                    left: 0;
+                    width: 100%;
+                    background: $white;
+                    font-family: $poppins;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    li {
+                        width: 100%;
+                        height: 4rem;
+                        @include flexbox(row, flex-start, center);
+                        gap: 0.8rem;
+                        padding: 0.7rem;
+                    }
                 }
             }
         }
@@ -220,8 +209,9 @@
 // 퀵메뉴
 #quickMenu {
     position: fixed;
-    right: -12%;
-    bottom: 10%;
+    right: 7%;
+    bottom: 14rem;
+    z-index: 888;
     .scroll-box {
         position: relative;
         .control-wrap {
@@ -238,21 +228,3 @@
         }
     }
 }
-
-// #quickMenu {
-//     .scroll-box {
-//         width: 100%;
-//         // height: 300vh;
-//         position: relative;
-//         .control-wrap {
-//             position: fixed;
-//             bottom: 60px;
-//             right: 60px;
-//             li {
-//                 &:first-child {
-//                     margin-bottom: 30px;
-//                 }
-//             }
-//         }
-//     }
-// }
