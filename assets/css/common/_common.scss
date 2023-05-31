@@ -48,7 +48,7 @@ html{
 
 body{
     font-size: 1.6rem;
-    line-height: 1;
+    line-height: 1.5;
     *{
         font-weight: 400;
         color: $black;
@@ -66,7 +66,64 @@ body{
     margin: 0 auto;
 }
 
-.flex-wrap{@include flexbox(row, flex-start, flex-start);}
+.category-list {
+    .category-list-tit {
+        font-family: $spoqa;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-top: 0.6rem;
+        border-bottom: 1px solid $black;
+    }
+    .category-list-wrap {
+        margin-top: 2.4rem;
+        .active {
+            ul {
+                width: 100%;
+                @include flexbox(row, flex-start, flex-start);
+                flex-wrap: wrap;
+                gap: 6rem 2.4rem;
+                li {
+                    width: calc(25% - 1.8rem);
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        div {
+                            position: relative;
+                            margin-bottom: 1.2rem;
+                            width: 100%;
+                            max-height: 38rem;
+                            height: 87%;
+                            overflow: hidden;
+                            border: 1px solid #eee;
+                            @include flexbox(row, center, center);
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                object-fit: cover;
+                                transition: all .35s;
+                            }
+                        }
+                        .sub-tit {
+                            position: relative;
+                            font-family: $spoqa;
+                            font-weight: 600;
+                            font-size: 2rem;
+                            @include ellipsis(1);
+                        }
+                        span {
+                            @include ellipsis(2);
+                            font-family: $spoqa;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .hide {
     position: absolute;

@@ -16,7 +16,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  line-height: 1;
+  line-height: 1.5;
 }
 body * {
   font-weight: 400;
@@ -34,11 +34,73 @@ body * {
   margin: 0 auto;
 }
 
-.flex-wrap {
+.category-list .category-list-tit {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+  border-bottom: 1px solid #222222;
+}
+.category-list .category-list-wrap {
+  margin-top: 2.4rem;
+}
+.category-list .category-list-wrap .active ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6rem 2.4rem;
+}
+.category-list .category-list-wrap .active ul li {
+  width: calc(25% - 1.8rem);
+}
+.category-list .category-list-wrap .active ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.category-list .category-list-wrap .active ul li a div {
+  position: relative;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  max-height: 38rem;
+  height: 87%;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.category-list .category-list-wrap .active ul li a div img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.35s;
+}
+.category-list .category-list-wrap .active ul li a .sub-tit {
+  position: relative;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 600;
+  font-size: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.category-list .category-list-wrap .active ul li a span {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .hide {
@@ -84,7 +146,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  line-height: 1;
+  line-height: 1.5;
 }
 body * {
   font-weight: 400;
@@ -102,11 +164,73 @@ body * {
   margin: 0 auto;
 }
 
-.flex-wrap {
+.category-list .category-list-tit {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+  border-bottom: 1px solid #222222;
+}
+.category-list .category-list-wrap {
+  margin-top: 2.4rem;
+}
+.category-list .category-list-wrap .active ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6rem 2.4rem;
+}
+.category-list .category-list-wrap .active ul li {
+  width: calc(25% - 1.8rem);
+}
+.category-list .category-list-wrap .active ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.category-list .category-list-wrap .active ul li a div {
+  position: relative;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  max-height: 38rem;
+  height: 87%;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.category-list .category-list-wrap .active ul li a div img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.35s;
+}
+.category-list .category-list-wrap .active ul li a .sub-tit {
+  position: relative;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 600;
+  font-size: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.category-list .category-list-wrap .active ul li a span {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .hide {

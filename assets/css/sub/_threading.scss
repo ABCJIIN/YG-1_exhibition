@@ -54,6 +54,7 @@
                 }
                 .category_cont {
                     width: 100%;
+                    margin-top: 3rem;
                     height: calc(100% - 6.1rem);
                     overflow-y: auto;
                     &::-webkit-scrollbar {width: 8px;}
