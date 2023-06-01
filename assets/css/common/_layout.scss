@@ -5,6 +5,7 @@
 #header {
     position: relative;
     width: 100%;
+    height: 6rem;
     .logo-area {
         position: fixed;
         top: 0;
@@ -106,7 +107,13 @@
                 background: transparent;
                 &.prev-btn , &.next-btn {
                     width: 4rem;
-                    img{width: 100%;}
+                    img{
+                        width: 100%;
+                        opacity: 0.2;
+                    }
+                    &.active {
+                        img {opacity: 1;}
+                    }
                 }
                 &:not(:last-child) {
                     &::after {
